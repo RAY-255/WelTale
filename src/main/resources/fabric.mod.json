@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "weltale",
+	"version": "${version}",
+	"name": "Weltale",
+	"description": "Mod specially for the server Welten",
+	"authors": [
+		"rays"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/weltale/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.weltale.Weltale"
+		],
+		"client": [
+			"com.weltale.WeltaleClient"
+		],
+		"fabric-datagen": [
+			"com.weltale.WeltaleDataGenerator"
+		]
+	},
+	"mixins": [
+		"weltale.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
