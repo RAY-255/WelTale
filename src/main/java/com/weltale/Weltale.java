@@ -1,5 +1,7 @@
 package com.weltale;
 
+import com.weltale.block.welltale_blocks;
+import com.weltale.items.welltale_items;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -12,10 +14,10 @@ public class Weltale implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+		welltale_items.registerModItems();
+		welltale_blocks.registerModBlocks();
 
-		LOGGER.info("Hello Fabric world!");
+
+		LOGGER.info("welltale is start");
 	}
 }
