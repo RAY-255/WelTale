@@ -28,6 +28,7 @@ public class welltale_blocks {
     }
 
 
+
     private static Item registerBlockItem(String name, Block block) {
         return Registry.register(Registries.ITEM, new Identifier(Weltale.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));
