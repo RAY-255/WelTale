@@ -16,7 +16,7 @@ public class other_crown implements ArmorMaterial {
 
     @Override
     public int getDurability(ArmorItem.Type type) {
-        return 10;
+        return -1;
     }
 
     @Override
@@ -41,7 +41,7 @@ public class other_crown implements ArmorMaterial {
 
     @Override
     public String getName() {
-        return "name";
+        return "crown";
     }
 
     @Override

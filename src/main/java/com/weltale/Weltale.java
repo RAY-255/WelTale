@@ -2,6 +2,7 @@ package com.weltale;
 
 import com.mojang.brigadier.LiteralMessage;
 import com.weltale.block.welltale_blocks;
+import com.weltale.effects.welltale_effects;
 import com.weltale.items.welltale_items;
 import net.fabricmc.api.ModInitializer;
 
@@ -26,16 +27,17 @@ public class Weltale implements ModInitializer {
 	public void onInitialize() {
 		welltale_items.registerModItems();
 		welltale_blocks.registerModBlocks();
+		welltale_effects.registerEffects();
 
 
 		LOGGER.info("welltale is start");
 
-
+		//кастыль
 		AttackEntityCallback.EVENT.register((player, world, hand,entity,hitResult) -> {
 			ItemStack helmet = player.getInventory().armor.get(3);
 			if (helmet.getItem() == welltale_items.OTHER_CROWN) {
 				// Накладываем эффект на игрока
-				player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 600, 1));
+				player.addStatusEffect(new StatusEffectInstance(welltale_effects.СURVATURE, 600, 1));
 			}
 			return ActionResult.PASS;
 		});
